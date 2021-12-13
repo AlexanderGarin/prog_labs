@@ -1,0 +1,21 @@
+var arr :array[1..10] of integer;
+var i, c, a :integer;
+
+begin
+  a := 0;
+  c := 0;
+  
+  for i:= 1 to 10 do
+  begin
+    read(arr[i]);
+    if arr[i] > 0 then 
+      a := i; //find last positive element
+  end;
+  
+//  writeln(a);
+  
+  for i:= 2 to a do
+    c := c + abs(arr[i]);
+  
+  writeln(c);
+end.
